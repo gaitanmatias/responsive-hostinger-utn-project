@@ -1,11 +1,14 @@
 const navToggleBtn = document.getElementById('nav-toggle-btn')
+const body = document.getElementById('body')
 navToggleBtn.addEventListener('click', function() {
   const navMenu = document.querySelector('.nav__links');
   navMenu.classList.toggle('active');
   if (navToggleBtn.classList.contains('fa-bars')) {
     navToggleBtn.classList.replace('fa-bars', 'fa-xmark');
+    body.style.overflow = 'hidden'
   } else {
     navToggleBtn.classList.replace('fa-xmark', 'fa-bars');
+    body.style.overflow = 'auto'
   }
 });
 
