@@ -3,11 +3,11 @@ const body = document.getElementById('body')
 navToggleBtn.addEventListener('click', function() {
   const navMenu = document.querySelector('.nav__links');
   navMenu.classList.toggle('active');
-  if (navToggleBtn.classList.contains('fa-bars')) {
-    navToggleBtn.classList.replace('fa-bars', 'fa-xmark');
+  if (navToggleBtn.classList.contains('bi-list')) {
+    navToggleBtn.classList.replace('bi-list', 'bi-x-lg');
     body.style.overflow = 'hidden'
   } else {
-    navToggleBtn.classList.replace('fa-xmark', 'fa-bars');
+    navToggleBtn.classList.replace('bi-x-lg', 'bi-list');
     body.style.overflow = 'auto'
   }
 });
@@ -17,11 +17,11 @@ const navArrows = document.querySelectorAll('.nav__arrow');
 function handleMediaQuery(e) {
   if (e.matches) {
     navArrows.forEach(arrow => {
-      arrow.classList.replace('fa-chevron-down', 'fa-chevron-right');
+      arrow.classList.replace('bi-chevron-down', 'bi-chevron-right');
     });
   } else {
     navArrows.forEach(arrow => {
-      arrow.classList.replace('fa-chevron-right', 'fa-chevron-down');
+      arrow.classList.replace('bi-chevron-right', 'bi-chevron-down');
     });
   }
 }
